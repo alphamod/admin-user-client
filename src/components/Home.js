@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import auth from '../API/auth';
 import Admin from './Admin';
@@ -6,11 +6,10 @@ import Admin from './Admin';
 
 const Home = () => {
     const currentUser = auth.currentUser();
-    const [userRole, setUserRole] = useState("");
+    // const [userRole, setUserRole] = useState("");
+    const userRole = currentUser.role[currentUser.role.length - 1]
 
-    useEffect(() => {
-        setUserRole(currentUser.role[currentUser.role.length - 1]);
-    }, [currentUser.role[currentUser.role.length - 1]]);
+    
 
     if (!currentUser) {
         return <Redirect to="/login" />
