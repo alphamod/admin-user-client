@@ -16,7 +16,7 @@ const ActivateBtn = ({ active, id }) => {
     return (
         <>
             {
-                activeState ? <button className="btn btn-primary" onClick={handleActivation}><span><img className="activeImg" src="https://img.icons8.com/emoji/344/green-circle-emoji.png" /></span>Deactivate</button> : <button className="btn btn-primary" onClick={handleActivation}><span><img className="activeImg" src="https://img.icons8.com/emoji/344/red-circle-emoji.png" /></span>Activate</button>
+                activeState ? <button className="btn btn-primary" onClick={handleActivation}><span><img alt="" className="activeImg" src="https://img.icons8.com/emoji/344/green-circle-emoji.png" /></span>Deactivate</button> : <button className="btn btn-primary" onClick={handleActivation}><span><img className="activeImg" src="https://img.icons8.com/emoji/344/red-circle-emoji.png" alt="" /></span>Activate</button>
             }
         </>
     )

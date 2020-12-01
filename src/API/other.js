@@ -15,4 +15,5 @@ const emailNotify = (userId, toContacts, fromUser) => {
     return axios.post(`${BASE_API}user/email-notify/${userId}`, { toContacts, fromUser }, { headers: authHeader() });
 };
 
-export default { userActivation, emailNotify, adminPagination };
+const other = { userActivation, emailNotify, adminPagination };
+export default other;

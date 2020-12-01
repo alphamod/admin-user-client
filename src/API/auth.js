@@ -26,4 +26,5 @@ const currentUser = () => {
     return JSON.parse(localStorage.getItem("userToken"));
 };
 
-export default { register, login, logout, currentUser };
+const auth = { register, login, logout, currentUser };
+export default auth;
